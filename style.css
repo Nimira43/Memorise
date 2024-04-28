@@ -44,6 +44,23 @@ html {
     padding: var(--gap);
 }
 
+.card {
+    background-color: var(--khaki);
+    box-shadow: 0 0 0.3rem #333;
+    display: grid;
+    place-items: center;
+    border-radius: inherit;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: var(--khaki);
+    border-radius: inherit;
+}
+
 .modal {
     position: fixed;
     inset: 0;
