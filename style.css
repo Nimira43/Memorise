@@ -30,7 +30,7 @@ html {
         linear-gradient(
         rgba(0, 0, 0, 0.7),
         rgba(0, 0, 0, 0.6)),
-        url('./images/bg.jpg') no-repeat center;
+        url('./bg/bg.jpg') no-repeat center;
     background-size: cover;
 }
 
@@ -39,6 +39,9 @@ html {
     width: 90vmin;
     height: 90vmin;
     border-radius: var(--gap);
+    display: grid;
+    gap: var(--gap);
+    padding: var(--gap);
 }
 
 .modal {
