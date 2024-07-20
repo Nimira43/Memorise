@@ -22,7 +22,7 @@ html {
   --light-2: #f3f0d8;
   --light-A: #f3f0d899;
   --white-A: #fafaefcc;
-  --sel: #ffa500;
+  --main: #ffa500;
 }
 
 .container {
@@ -67,7 +67,7 @@ html {
 }
 
 .card.change img {
-  background-color: var(--sel);
+  background-color: var(--main);
 }
 
 .modal {
@@ -101,6 +101,7 @@ html {
 
 .modal-time {
   display: flex;
+  font-weight: bold;
   align-items: center;
   column-gap: var(--gap);
 }
@@ -111,7 +112,7 @@ html {
 
 .modal-text {
   font-size: 1.8rem;
-  font-weight: lighter;
+  font-weight: bold;
 }
 
 .btn {
