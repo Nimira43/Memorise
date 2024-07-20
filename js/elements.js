@@ -5,6 +5,12 @@ class Elements {
     this.cardsIndex = []
     this.doubleIndex()
     this.createCard()
+    this.cards = document.querySelectorAll('.card')
+    this.attempts = {
+      correct: 0,
+      wrong: 0, 
+      click: 0
+    }
   }
 
   shuffleIndexes(array) {
@@ -17,7 +23,6 @@ class Elements {
         ? this.cardsIndex.push(i)
         : this.cardsIndex.push(i - this.cardsNumber / 2)
     }
-    console.log(this.cardsIndex)
   }
 
   createCard() {

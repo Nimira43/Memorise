@@ -2,7 +2,18 @@ import Elements from './elements.js'
 
 class Controller {
   constructor(cardsNumber) {
-    this.element = new Elements(cardsNumber)
+    this.elements = new Elements(cardsNumber)
+    this.clickCard()
+  }
+
+  clickCard() {
+    const { attempts, cards } = this.elements
+    cards.forEach((card) => {
+      card.addEventListener('click', () => {
+        attempts.click++
+        card.classList.add('change')
+      })
+    })
   }
 }
 
