@@ -24,6 +24,12 @@ class Elements {
       `
       repeat(${Math.sqrt(this.cardsNumber)}, 1fr)
       `
+    this.cardsIndex.forEach((index) => {
+      const card = document.createElement('div')
+      card.classList.add('card')
+      card.setAttribute('data-index', index)
+      const img = document.createElement('img')
+    })      
   }
 }
 
