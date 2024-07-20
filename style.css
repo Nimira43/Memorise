@@ -19,4 +19,88 @@ html {
   --grey: #333; 
   --dark: #111;
   --blue: #5fc4eb;
+  --light-2: #f3f0d8;
+  --light-A: #f3f0d899;
+  --white-A: #fafaefcc;
 }
+
+.container {
+  height: 100svh;
+  display: grid;
+  place-items: center;
+}
+
+.playground {
+  background-color: var(--blue);
+  width: 90vmin;
+  height: 90vmin;
+  border-radius: var(--gap);
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: var(--light-A);
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: var(--gap);
+  width: 40rem;
+  aspect-ratio: 1;
+  background-color: var(--white-A);
+  border-radius: var(--gap);
+}
+
+.modal-heading {
+  font-size: 4rem;
+  color: var(--blue);
+  text-shadow: 1px 1px 0 var(--dark);
+  margin-bottom: var(--gap);
+}
+
+.modal-time {
+  display: flex;
+  align-items: center;
+  column-gap: var(--gap);
+}
+
+.modal-time > span {
+  font-size: 1.8rem;
+}
+
+.modal-text {
+  font-size: 1.8rem;
+  font-weight: lighter;
+}
+
+.btn {
+  box-sizing: content-box;
+  padding: 0.5rem 1rem;
+  background-color: var(--blue);
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  color: var(--light-2);
+  text-shadow: 1px 1px 0 var(--dark);
+
+}
+
+
+
+
+
+
+
