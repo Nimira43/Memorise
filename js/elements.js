@@ -6,6 +6,11 @@ class Elements {
     this.doubleIndex()
     this.createCard()
   }
+
+  shuffleIndexes(array) {
+    return array.sort(() => Math.random() - 0.5)
+  }
+
   doubleIndex() {
     for (let i = 1; i <= this.cardsNumber; i++) {
       i <= this.cardsNumber / 2
@@ -24,7 +29,7 @@ class Elements {
       `
       repeat(${Math.sqrt(this.cardsNumber)}, 1fr)
       `
-    this.cardsIndex.forEach((index) => {
+    this.shuffleIndexes(this.cardsIndex).forEach((index) => {
       const card = document.createElement('div')
       card.classList.add('card')
       card.setAttribute('data-index', index)
