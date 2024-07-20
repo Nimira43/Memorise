@@ -95,11 +95,34 @@ html {
   cursor: pointer;
   color: var(--light-2);
   text-shadow: 1px 1px 0 var(--dark);
-
 }
 
+.features {
+  display: flex;
+  align-items: center;
+  column-gap: 3rem;
+}
 
+.features .restart-btn {
+  margin: 0;
+  font-size: 1rem;
+  background-color: var(--dark);
+}
 
+.timer {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--dark);
+}
+
+.timer span {
+  font-size: 1.6rem;
+  width: 2.7rem;
+}
+
+.timer span:last-child {
+  margin-left: 0.5rem;
+}
 
 
 
