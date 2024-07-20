@@ -17,6 +17,7 @@ class Elements {
     this.restartBtn = document.querySelector('.restart-btn')
     this.timer = document.querySelector('.timer')
     this.modalTime = document.querySelector('.modal-time')
+    this.restartGame()
   }
 
   shuffleIndexes(array) {
@@ -52,6 +53,20 @@ class Elements {
       card.append(img)
       this.playground.append(card)
     })      
+  }
+  restartGame() {
+    this.restartBtn.onclick = () => {
+      this.modal.style.cssText = 'visibility: visible; opacity: 1; transition: opacity 0.5s;'
+      const modalContent = this.modal.firstElementChild
+      modalContent.innerHTML =
+        '<h2 class="modal-text">Do you to restart the game?</h2><div><button class="btn yes-btn">Yes</button><button class="btn cancel-btn">Cancel</button></div>'
+      modalContent.querySelector('.cancel-btn').onclick = () => {
+        this.modal.style.cssText = 'visibility: hidden; opacity: 0; transition: 1; transition: opacity 0.5s;'
+      }
+      modalContent.querySelector('.yes-btn').onclick = () => {
+        location.reload()
+      }
+    }
   }
 }
 
