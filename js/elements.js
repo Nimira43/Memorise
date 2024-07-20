@@ -11,6 +11,9 @@ class Elements {
       wrong: 0, 
       click: 0
     }
+    this.modal = document.querySelector('.modal')
+    this.modalBtn = document.querySelector('.modal-btn')
+    this.wrong = document.querySelector('.wrong')
   }
 
   shuffleIndexes(array) {

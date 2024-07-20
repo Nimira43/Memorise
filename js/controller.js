@@ -32,12 +32,24 @@ class Controller {
             }, 1000)
           }
           attempts.click = 0
+          this.endGame(attempts)
           console.log(attempts.correct, attempts.wrong)
         } else {
           this.prevCard = card
         }
       })
     })
+  }
+  endGame({ correct }) {
+    const { cardsNumber, modal, modalBtn, wrong, attempts } = this.elements
+    if (correct === cardsNumber / 2) {
+      console.log('You Won')
+      modal.style.cssText = 'visibility: visible; opacity: 1;'
+      wrong.textContent = attempts.wrong
+      modalBtn.onclick = () => location.reload()
+    } else {
+      console.log('Not yet')
+    }
   }
 }
 
