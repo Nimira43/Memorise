@@ -15,24 +15,23 @@ html {
   --grid-cell: 6;
   --gap: 1rem;
   --time: 0.5s;
-  --light: #f8f8e3;
-  --grey: #333; 
+  --main: #ff4500;
+  --light: #fbfb93;
   --dark: #111;
-  --blue: #5fc4eb;
-  --light-2: #f3f0d8;
-  --light-A: #f3f0d899;
-  --white-A: #fafaefcc;
-  --main: #ffa500;
+  --blue: #5fc4eb; 
+  --submit: #f3f0d8;
+  --mco: #111111d1;
 }
 
 .container {
   height: 100svh;
   display: grid;
   place-items: center;
+  background-color: var(--dark);
 }
 
 .playground {
-  background-color: var(--blue);
+  background-color: var(--main);
   width: 90vmin;
   height: 90vmin;
   border-radius: var(--gap);
@@ -41,9 +40,21 @@ html {
   padding: var(--gap);
 }
 
+.select-cells-number {
+  background-color: var(--main);
+  appearance: none;
+  border: none;
+  color: var(--submit);
+  font-weight: bold;
+  padding: 3px;
+  border-radius: 50%; 
+  outline: none;
+  cursor: pointer;
+}
+
 .card {
-  background-color: var(--light);
-  box-shadow: 0 0 0.3 var(--dark);
+  background-color: var(--blue);
+  box-shadow: 0 0 0.3rem var(--dark);
   display: grid;
   place-items: center;
   border-radius: inherit;
@@ -87,7 +98,7 @@ html {
 .modal {
   position: fixed;
   inset: 0;
-  background-color: var(--light-A);
+  background-color: var(--mco);
   display: grid;
   place-items: center;
   opacity: 0;
@@ -103,13 +114,13 @@ html {
   row-gap: var(--gap);
   width: 40rem;
   aspect-ratio: 1;
-  background-color: var(--white-A);
+  background-color: var(--dark);
   border-radius: var(--gap);
 }
 
 .modal-heading {
   font-size: 4rem;
-  color: var(--blue);
+  color: var(--main);
   text-shadow: 1px 1px 0 var(--dark);
   margin-bottom: var(--gap);
 }
@@ -118,14 +129,16 @@ html {
   display: flex;
   font-weight: bold;
   align-items: center;
+  color: var(--blue);
   column-gap: var(--gap);
 }
 
-.modal-time > span {
+.modal-time > span { 
   font-size: 1.8rem;
 }
 
 .modal-text {
+  color: var(--blue);
   font-size: 1.8rem;
   font-weight: bold;
 }
@@ -139,7 +152,7 @@ html {
 .btn {
   box-sizing: content-box;
   padding: 0.5rem 1rem;
-  background-color: var(--blue);
+  background-color: var(--main);
   border: none;
   border-radius: 0.5rem;
   font-size: 1.2rem;
@@ -148,7 +161,7 @@ html {
   letter-spacing: 0.2rem;
   margin-top: 2rem;
   cursor: pointer;
-  color: var(--light-2);
+  color: var(--submit);
   text-shadow: 1px 1px 0 var(--dark);
 }
 
@@ -166,17 +179,17 @@ html {
 .features .restart-btn {
   margin: 0;
   font-size: 1rem;
-  background-color: var(--dark);
+  background-color: var(--main);
 }
 
 .timer {
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   font-weight: bold;
-  color: var(--dark);
+  color: var(--main);
 }
 
 .timer span {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   width: 2.7rem;
 }
 
